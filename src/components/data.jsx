@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo, memo } from "react";
 import { Col, Row, Card, Table, Progress, Descriptions, Image } from "antd";
 
 function Current({ loading, data, unit }) {
@@ -241,7 +241,7 @@ function Air({ loading, data }) {
   );
 }
 
-export default function Data({ formData, info }) {
+export default memo(function Data({ formData, info }) {
   const [loading, setLoading] = useState(true);
 
   const components = {
@@ -299,4 +299,4 @@ export default function Data({ formData, info }) {
       </Row>
     </div>
   );
-}
+});
