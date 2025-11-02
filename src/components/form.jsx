@@ -66,7 +66,7 @@ export default function SearchForm({ formData, dispatch, handleNewRecord }) {
     }
 
     const trimmedValue = value?.trim();
-    if (!trimmedValue || trimmedValue.length < 1) {
+    if (!trimmedValue || trimmedValue.length < 2) {
       setCityOptions([]);
       return;
     }
